@@ -303,7 +303,7 @@ button {
 
 .home-hero {
   color: var(--texto-principal);
-  background: linear-gradient(to right, rgba(79, 235, 94, 0.1), var(--fondo-tarjetas)), url(../../assets/svg/common-bg.svg);
+  background: linear-gradient(to right, rgba(79, 235, 94, 0.1), var(--fondo-tarjetas)), url(../assets/svg/common-bg.svg);
   background-position: center;
   height: 100vh;
   min-height: 80rem;
@@ -513,7 +513,7 @@ button {
 }
 
 .contact {
-  background: linear-gradient(to right, rgba(79, 235, 94, 0.1), var(--fondo-tarjetas)), url(../../assets/svg/common-bg.svg);
+  background: linear-gradient(to right, rgba(79, 235, 94, 0.1), var(--fondo-tarjetas)), url(../assets/svg/common-bg.svg);
   background-size: cover;
   background-position: center
 }
@@ -962,7 +962,7 @@ button {
 
 /* Hero section en modo claro */
 [data-theme="light"] .home-hero {
-  background: linear-gradient(135deg, var(--fondo-principal) 0%, rgba(255, 255, 255, 0.8) 100%), url(../../assets/svg/common-bg.svg);
+  background: linear-gradient(135deg, var(--fondo-principal) 0%, rgba(255, 255, 255, 0.8) 100%), url(../assets/svg/common-bg.svg);
 }
 
 /* Headings específicos para modo claro */

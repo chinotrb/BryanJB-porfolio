@@ -2,7 +2,7 @@
   "name": "Bryan J. Brenes - Portfolio",
   "short_name": "BJB Portfolio",
   "description": "Portfolio personal de Bryan J. Brenes - Desarrollador Frontend, Pixel Artist y Boxing Enthusiast",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#00091B",
   "theme_color": "#0f4e1e",
