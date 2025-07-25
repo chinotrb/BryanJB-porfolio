@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Game Haven - Plataforma de Juegos | Bryan J. Brenes</title>
+  <meta name="description" content="Game Haven - Plataforma de juegos clásicos con estilo retro desarrollada con React, MongoDB y Node.js" />
+  <link rel="icon" type="image/svg+xml" href="./assets/svg/favicon.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="header__content">
+      <div class="header__logo-container">
+        <div class="header__logo-img-cont">
+          <img src="./assets/png/BryanJB.PNG" class="header__logo-img" />
+        </div>
+        <span class="header__logo-sub">Bryan J Brenes</span>
+      </div>
+      <div class="header__main">
+        <ul class="header__links">
+          <li class="header__link-wrapper">
+            <a href="./index.html" class="header__link">← Volver al Portfolio</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <section class="project-hero game-haven-hero">
+    <div class="project-hero__content">
+      <div class="project-icon-large pixel-style">🟣</div>
+      <h1 class="heading-primary pixel-title">GAME HAVEN</h1>
+      <p class="project-hero__subtitle pixel-subtitle">Plataforma de Juegos Clásicos</p>
+      <div class="project-status-banner">
+        <span class="status-text">🚀 EN DESARROLLO</span>
+      </div>
+      <div class="project-hero__tech">
+        <span class="tech-tag-large">React</span>
+        <span class="tech-tag-large">MongoDB</span>
+        <span class="tech-tag-large">Node.js</span>
+        <span class="tech-tag-large">Socket.io</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-details-page">
+    <div class="main-container">
+      
+      <!-- Game Gallery -->
+      <div class="project-section">
+        <h2 class="section-title pixel-text">🎮 Galería de Juegos</h2>
+        <div class="game-gallery">
+          <div class="game-carousel-container">
+            <div id="gameHavenDetailCarousel" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="./assets/png/opened.png" alt="Game Haven - Pantalla Principal">
+                  <div class="carousel-caption">
+                    <h5>Pantalla Principal</h5>
+                    <p>Menú principal con diseño pixel art nostálgico</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="./assets/png/inGame.png" alt="Game Haven - En Juego">
+                  <div class="carousel-caption">
+                    <h5>Experiencia de Juego</h5>
+                    <p>Interfaz optimizada para una experiencia inmersiva</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="./assets/png/logros.png" alt="Game Haven - Sistema de Logros">
+                  <div class="carousel-caption">
+                    <h5>Sistema de Logros</h5>
+                    <p>Badges y achievements para motivar a los jugadores</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="./assets/png/rancked.png" alt="Game Haven - Rankings">
+                  <div class="carousel-caption">
+                    <h5>Sistema de Rankings</h5>
+                    <p>Competencia global con leaderboards</p>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#gameHavenDetailCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              </a>
+              <a class="carousel-control-next" href="#gameHavenDetailCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game Features -->
+      <div class="project-section">
+        <h2 class="section-title pixel-text">🕹️ Juegos Disponibles</h2>
+        <div class="games-grid">
+          <div class="game-card">
+            <div class="game-icon">🧩</div>
+            <h3>Tetris</h3>
+            <p>El clásico juego de bloques con múltiples niveles de dificultad</p>
+            <div class="game-features">
+              <span class="feature-tag">Multijugador</span>
+              <span class="feature-tag">Rankings</span>
+            </div>
+          </div>
+          
+          <div class="game-card">
+            <div class="game-icon">🐍</div>
+            <h3>Snake</h3>
+            <p>La serpiente que crece mientras devora comida</p>
+            <div class="game-features">
+              <span class="feature-tag">Power-ups</span>
+              <span class="feature-tag">Efectos especiales</span>
+            </div>
+          </div>
+          
+          <div class="game-card">
+            <div class="game-icon">💣</div>
+            <h3>Minesweeper</h3>
+            <p>Encuentra todas las minas sin explotar ninguna</p>
+            <div class="game-features">
+              <span class="feature-tag">Diferentes tamaños</span>
+              <span class="feature-tag">Temporizador</span>
+            </div>
+          </div>
+          
+          <div class="game-card">
+            <div class="game-icon">♞</div>
+            <h3>Chess</h3>
+            <p>Ajedrez clásico con IA y modo multijugador</p>
+            <div class="game-features">
+              <span class="feature-tag">IA integrada</span>
+              <span class="feature-tag">Análisis de partidas</span>
+            </div>
+          </div>
+          
+          <div class="game-card">
+            <div class="game-icon">🃏</div>
+            <h3>Card Games</h3>
+            <p>Colección de juegos de cartas clásicos</p>
+            <div class="game-features">
+              <span class="feature-tag">Solitario</span>
+              <span class="feature-tag">Blackjack</span>
+            </div>
+          </div>
+          
+          <div class="game-card coming-soon">
+            <div class="game-icon">🎯</div>
+            <h3>Más Juegos</h3>
+            <p>Nuevos juegos se añaden constantemente</p>
+            <div class="game-features">
+              <span class="feature-tag">Próximamente</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technical Architecture -->
+      <div class="project-section">
+        <h2 class="section-title pixel-text">🏗️ Arquitectura Técnica</h2>
+        <div class="architecture-description">
+          <p>
+            Game Haven está construido con una arquitectura moderna y escalable que prioriza el rendimiento 
+            y la experiencia del usuario. La plataforma utiliza tecnologías web de última generación para 
+            ofrecer juegos fluidos directamente en el navegador.
+          </p>
+        </div>
+        
+        <div class="tech-architecture">
+          <div class="arch-layer">
+            <h3>🎨 Frontend (React)</h3>
+            <ul>
+              <li>Componentes reutilizables para cada juego</li>
+              <li>Canvas HTML5 para rendering de alta performance</li>
+              <li>Estado global con Redux para manejo de puntuaciones</li>
+              <li>CSS-in-JS para temas personalizables</li>
+            </ul>
+          </div>
+          
+          <div class="arch-layer">
+            <h3>⚡ Backend (Node.js + Express)</h3>
+            <ul>
+              <li>API RESTful para gestión de usuarios y scores</li>
+              <li>WebSockets para funcionalidades en tiempo real</li>
+              <li>Middleware de autenticación JWT</li>
+              <li>Rate limiting para prevenir spam</li>
+            </ul>
+          </div>
+          
+          <div class="arch-layer">
+            <h3>🗄️ Base de Datos (MongoDB)</h3>
+            <ul>
+              <li>Colecciones optimizadas para perfiles de usuario</li>
+              <li>Índices compuestos para rankings eficientes</li>
+              <li>Agregation pipelines para estadísticas</li>
+              <li>Sharding preparado para escalabilidad</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- User Experience Features -->
+      <div class="project-section">
+        <h2 class="section-title pixel-text">✨ Características de UX</h2>
+        <div class="ux-features">
+          <div class="ux-feature">
+            <div class="ux-icon">👤</div>
+            <h3>Sistema de Cuentas</h3>
+            <p>Registro y login seguro con autenticación JWT. Los usuarios pueden guardar su progreso y competir globalmente.</p>
+          </div>
+          
+          <div class="ux-feature">
+            <div class="ux-icon">🏆</div>
+            <h3>Sistema de Logros</h3>
+            <p>Badges y achievements desbloqueables que motivan a los jugadores a mejorar y explorar todos los juegos.</p>
+          </div>
+          
+          <div class="ux-feature">
+            <div class="ux-icon">📊</div>
+            <h3>Leaderboards Globales</h3>
+            <p>Rankings en tiempo real que fomentan la competencia sana entre jugadores de todo el mundo.</p>
+          </div>
+          
+          <div class="ux-feature">
+            <div class="ux-icon">🎨</div>
+            <h3>Estética Pixel Art</h3>
+            <p>Diseño nostálgico que evoca los juegos clásicos de arcade, con paleta de colores cuidadosamente seleccionada.</p>
+          </div>
+          
+          <div class="ux-feature">
+            <div class="ux-icon">📱</div>
+            <h3>Responsive Design</h3>
+            <p>Experiencia optimizada tanto para desktop como para dispositivos móviles, con controles adaptativos.</p>
+          </div>
+          
+          <div class="ux-feature">
+            <div class="ux-icon">🔊</div>
+            <h3>Audio Inmersivo</h3>
+            <p>Efectos de sonido y música de fondo que complementan la experiencia retro de cada juego.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Development Status -->
+      <div class="project-section">
+        <h2 class="section-title pixel-text">🚧 Estado del Desarrollo</h2>
+        <div class="development-timeline">
+          <div class="timeline-item completed">
+            <div class="timeline-icon">✅</div>
+            <div class="timeline-content">
+              <h3>Fase 1: Fundamentos</h3>
+              <p>Arquitectura base, sistema de usuarios, diseño pixel art</p>
+              <span class="timeline-date">Completado</span>
+            </div>
+          </div>
+          
+          <div class="timeline-item completed">
+            <div class="timeline-icon">✅</div>
+            <div class="timeline-content">
+              <h3>Fase 2: Juegos Core</h3>
+              <p>Implementación de Tetris, Snake y Minesweeper</p>
+              <span class="timeline-date">Completado</span>
+            </div>
+          </div>
+          
+          <div class="timeline-item in-progress">
+            <div class="timeline-icon">🔄</div>
+            <div class="timeline-content">
+              <h3>Fase 3: Funcionalidades Avanzadas</h3>
+              <p>Sistema de logros, leaderboards, multijugador en tiempo real</p>
+              <span class="timeline-date">En Progreso</span>
+            </div>
+          </div>
+          
+          <div class="timeline-item pending">
+            <div class="timeline-icon">⏳</div>
+            <div class="timeline-content">
+              <h3>Fase 4: Expansión</h3>
+              <p>Más juegos, torneos, integración social</p>
+              <span class="timeline-date">Planeado</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Demo Section -->
+      <div class="project-section demo-section">
+        <h2 class="section-title pixel-text">🎯 Demo y Enlaces</h2>
+        <div class="demo-content">
+          <div class="demo-description">
+            <p>
+              Aunque Game Haven está todavía en desarrollo, ya cuenta con varias funcionalidades jugables. 
+              El proyecto representa mi pasión por los videojuegos clásicos y mi habilidad para crear 
+              experiencias interactivas modernas con estética retro.
+            </p>
+          </div>
+          <div class="demo-buttons">
+            <a href="./ComingSoon.html" target="_blank" class="demo-btn primary">
+              🎮 Ver Demo
+            </a>
+            <a href="#" class="demo-btn secondary" onclick="alert('Código disponible por solicitud')">
+              📝 Ver Código
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="project-navigation">
+        <a href="./project-billix.html" class="nav-btn">← Anterior: BilliX</a>
+        <a href="./index.html#projects" class="nav-btn">Volver a Proyectos</a>
+      </div>
+      
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="main-container">
+      <div class="main-footer__upper">
+        <div class="main-footer__row main-footer__row-2">
+          <h4 class="heading heading-sm text-lt">Bryan J. Brenes</h4>
+          <p class="main-footer__short-desc">📧 bryanthomasjb@gmail.com</p>
+          <p class="main-footer__credits">Desarrollado con pasión por Bryan J. Brenes 💻🥊🎮</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+  <script src="translations.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

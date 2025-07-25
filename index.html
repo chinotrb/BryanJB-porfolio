@@ -5,8 +5,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="icon" type="image/svg+xml" href="/Bryan_JB_Portafolio/assets/png/JBicon.png" />
-  <title>BryanJB Portfolio</title>
+  <meta name="description" content="Portfolio de Bryan J. Brenes - Desarrollador Frontend, Pixel Artist y Boxing Enthusiast" />
+  <meta name="keywords" content="desarrollador frontend, pixel art, boxeo, videojuegos, React, JavaScript, HTML, CSS" />
+  <meta name="author" content="Bryan J. Brenes" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bryanjbrenes.dev/" />
+  <meta property="og:title" content="Bryan J. Brenes - Portfolio | Frontend Dev 🥊🎮" />
+  <meta property="og:description" content="Desarrollador Frontend con pasión por el pixel art, boxeo y videojuegos. Explora mis proyectos y habilidades." />
+  <meta property="og:image" content="./assets/png/BryanJB.PNG" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://bryanjbrenes.dev/" />
+  <meta property="twitter:title" content="Bryan J. Brenes - Portfolio | Frontend Dev 🥊🎮" />
+  <meta property="twitter:description" content="Desarrollador Frontend con pasión por el pixel art, boxeo y videojuegos." />
+  <meta property="twitter:image" content="./assets/png/BryanJB.PNG" />
+  
+  <!-- PWA -->
+  <link rel="manifest" href="./manifest.json" />
+  <meta name="theme-color" content="#0f4e1e" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="BJB Portfolio" />
+  
+  <link rel="icon" type="image/svg+xml" href="./assets/svg/favicon.svg" />
+  <title>Bryan J. Brenes - Portfolio | Frontend Dev 🥊🎮</title>
 
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -19,10 +45,11 @@
 
   <div id="myModal" class="modal">
     <div class="modal-content">
-      <p class="Text-Title">¡Welcome to my Portfolio!</p>
-      <p style="font-size: 1.8rem; color: grey; margin-bottom: 3rem;">Here you will find information about me and my
-        projects.</p>
-      <button class="button_general general-button dynamicBgClr close-btn">see you </button>
+      <p class="Text-Title" data-lang-key="welcome-title">¡Bienvenido a mi Portfolio!</p>
+      <p style="font-size: 1.8rem; color: grey; margin-bottom: 3rem;" data-lang-key="welcome-description">
+        Aquí encontrarás información sobre mí, mis proyectos y mis pasiones: desarrollo, boxeo, gaming y pixel art.
+      </p>
+      <button class="button_general general-button dynamicBgClr close-btn" data-lang-key="welcome-button">¡Empecemos! 🚀</button>
     </div>
   </div>
 
@@ -37,15 +64,28 @@
       <div class="header__main">
         <ul class="header__links">
           <li class="header__link-wrapper">
-            <a href="./index.html" class="header__link"> Home </a>
+            <a href="./index.html" class="header__link" data-lang-key="nav-home"> Inicio </a>
           </li>
           <li class="header__link-wrapper">
-            <a href="./index.html#about" class="header__link">About </a>
+            <a href="./index.html#about" class="header__link" data-lang-key="nav-about">Sobre Mí </a>
           </li>
           <li class="header__link-wrapper">
-            <a href="./index.html#projects" class="header__link">Projects </a>
+            <a href="./index.html#projects" class="header__link" data-lang-key="nav-projects">Proyectos </a>
+          </li>
+          <li class="header__link-wrapper">
+            <a href="./index.html#interests" class="header__link" data-lang-key="nav-interests">Intereses </a>
+          </li>
+          <li class="header__link-wrapper">
+            <a href="./index.html#contact" class="header__link" data-lang-key="nav-contact">Contacto </a>
           </li>
         </ul>
+        
+        <!-- Language Selector -->
+        <div class="language-selector">
+          <button class="lang-btn active" data-lang="es">🇪🇸 ES</button>
+          <button class="lang-btn" data-lang="en">🇺🇸 EN</button>
+        </div>
+        
         <div class="header__main-ham-menu-cont">
           <img src="./assets/svg/ham-menu.svg" alt="hamburger menu" class="header__main-ham-menu" />
           <img src="./assets/svg/ham-menu-close.svg" alt="hamburger menu close"
@@ -57,35 +97,53 @@
       <div class="header__sm-menu-content">
         <ul class="header__sm-menu-links">
           <li class="header__sm-menu-link">
-            <a href="./index.html"> Home </a>
+            <a href="./index.html" data-lang-key="nav-home"> Inicio </a>
           </li>
 
           <li class="header__sm-menu-link">
-            <a href="./index.html#about"> About </a>
+            <a href="./index.html#about" data-lang-key="nav-about"> Sobre Mí </a>
           </li>
 
           <li class="header__sm-menu-link">
-            <a href="./index.html#projects"> Projects </a>
+            <a href="./index.html#projects" data-lang-key="nav-projects"> Proyectos </a>
           </li>
 
           <li class="header__sm-menu-link">
-            <a href="./index.html#contact"> Contact </a>
+            <a href="./index.html#interests" data-lang-key="nav-interests"> Intereses </a>
+          </li>
+
+          <li class="header__sm-menu-link">
+            <a href="./index.html#contact" data-lang-key="nav-contact"> Contacto </a>
           </li>
         </ul>
+        
+        <!-- Language Selector for Mobile -->
+        <div class="language-selector language-selector--mobile">
+          <button class="lang-btn active" data-lang="es">🇪🇸 ES</button>
+          <button class="lang-btn" data-lang="en">🇺🇸 EN</button>
+        </div>
       </div>
     </div>
   </header>
   <section class="home-hero">
     <div class="home-hero__content">
-      <h1 class="heading-primary">Hey,I'm Bryan J.B</h1>
+      <h1 class="heading-primary" data-lang-key="hero-greeting">Hola, soy Bryan J. Brenes </h1>
       <div class="home-hero__info">
-        <p class="primary-text">
-          Front-End Developer
+        <p class="primary-text hero-subtitle" data-lang-key="hero-subtitle">
+         | Front-End Dev | 
         </p>
+        <div class="hero-avatar">
+          <div class="pixel-avatar">
+            <img src="./assets/png/BryanJB.PNG" alt="Bryan Avatar" class="avatar-img" />
+          </div>
+        </div>
         <div class="cv-container">
           <a class="download-button"
             href="https://www.dropbox.com/scl/fi/ce9se0uq5wr9x8xp52uvc/CV-BryanThomasJB_Developer.docx?rlkey=dheci3qv5xd25ne3kge3cm0vf&st=xc4deuwb&dl=0"
-            download="Mi_CV.pdf">Download CV</a>
+            download="Bryan_Brenes_CV.pdf">
+            <span class="btn-icon">📄</span>
+            <span data-lang-key="download-cv">Descargar CV</span>
+          </a>
         </div>
       </div>
     </div>
@@ -114,42 +172,50 @@
   <section id="about" class="about sec-pad">
     <div class="main-container">
       <h2 class="heading heading-sec heading-sec__mb-med">
-        <span class="heading-sec__main Text-Title">About Me</span>
-        <span class="general-text">
-          <p>
-            I am a<strong> junior front-end developer </strong>with a growing passion for web design and a keen interest
-            in editing.
-            My journey with programming started at a young age, fostering a deep appreciation for technology and
-            creativity.
-            I hold high expectations for my work and am eager to develop my skills further in this field.
-            With a strong desire to improve and succeed, I am committed to continuously learning and evolving as a
-            professional in web development.
-          </p>
-        </span>
+        <span class="heading-sec__main Text-Title" data-lang-key="about-title">Sobre Mí</span>
       </h2>
+      
+      <!-- Personalidad Section -->
+      <div class="about__personality">
+        <div class="personality-content">
+          <div class="personality-text">
+            <h3 class="Text-Title personality-title" data-lang-key="about-history-title">🧔 Mi Historia</h3>
+            <p class="general-text" data-lang-key="about-history-text">
+              Mi viaje en el desarrollo comenzó a una edad temprana, desarrollando una profunda apreciación por la tecnología y la creatividad.
+              Soy un desarrollador frontend junior con una pasión creciente por el diseño web y un gran interés en la edición.
+            </p>
+
+            <p class="general-text" data-lang-key="about-experience-text">
+              Mi experiencia se ha centrado principalmente en el desarrollo de interfaz de usuario (UI), donde he tenido la oportunidad de abordar una variedad de desafíos.
+              Con un fuerte deseo de mejorar y tener éxito, estoy comprometido a aprender y evolucionar continuamente como profesional en desarrollo web.
+            </p>
+          </div>
+          <div class="boxing-illustration">
+            <div class="boxing-gloves">🥊</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills & Certifications Section -->
       <div class="about__content">
         <div class="about__content-main">
-          <h3 class="Text-Title">Get to know me!</h3>
+          <h3 class="Text-Title" data-lang-key="about-experience-title">⚙️ Experiencia Profesional</h3>
           <div>
-            <p class="general-text">
-              My experience has been primarily focused on user <strong>interface (UI) development</strong>,
-              where I have had the opportunity to address a variety of challenges.
-              I consider that every day at work has been an opportunity to improve my skills and face challenges
-              effectively.
-              In UI development, I have learned to handle situations that require quick and efficient solutions,
-              from optimizing performance to resolving design conflicts.
+            <p class="general-text" data-lang-key="about-experience-p1">
+              Mi experiencia se ha centrado principalmente en el desarrollo de <strong>interfaz de usuario (UI)</strong>,
+              donde he tenido la oportunidad de abordar una variedad de desafíos.
+              Considero que cada día en el trabajo ha sido una oportunidad para mejorar mis habilidades y enfrentar desafíos de manera efectiva.
             </p>
-            <p class="general-text">
-              My focus has always been to maintain a high level of quality and usability in the applications I develop.
-              I am confident that my experience solving problems in the UI
-              space provides me with a solid foundation to address similar challenges in other aspects of software
-              development.
+            <p class="general-text" data-lang-key="about-experience-p2">
+              En desarrollo UI, he aprendido a manejar situaciones que requieren soluciones rápidas y eficientes,
+              desde optimización de rendimiento hasta resolución de conflictos de diseño.
+              Mi enfoque siempre ha sido mantener un alto nivel de calidad y usabilidad en las aplicaciones que desarrollo.
             </p>
           </div>
           <!-- Button trigger modal -->
           <button type="button" class="button_general general-button dynamicBgClr" data-toggle="modal"
-            data-target="#exampleModalLong">
-            Experience
+            data-target="#exampleModalLong" data-lang-key="work-experience-btn">
+            Ver Experiencia
           </button>
 
           <!-- Modal -->
@@ -158,54 +224,46 @@
             <div class="modal-dialog modal-lg" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title  popupTitle heading-main-popup" id="exampleModalLongTitle ">WORK EXPERIENCES
-                  </h5>
+                  <h5 class="modal-title  popupTitle heading-main-popup" id="exampleModalLongTitle" data-lang-key="modal-work-title">WORK EXPERIENCES</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body general-text">
                   <li>
-                    <strong>Inter at IDO Agency (2022-2024)</strong>
+                    <strong data-lang-key="modal-intern-title">Interno en IDO Agency (2022-2024)</strong>
 
-                    <p>Experience in creating interactive and user-friendly web applications using modern front-end
-                      technologies like HTML5, CSS3, and JavaScript frameworks such as Angular or React.</p>
-                    <p>Knowledge of database management systems like MySQL or MongoDB to ensure efficient data
-                      storage and retrieval.</p>
-                    <p>Strong problem-solving skills and the ability to troubleshoot and debug applications to
-                      deliver high-quality results.</p>
-                    <p>Familiarity with version control systems like Git for tracking changes in code and
-                      collaborating effectively with team members.</p>
-                    <p>Understanding of responsive design principles to develop websites that work seamlessly
-                      across various devices and screen sizes.</p>
-                    <p>Adaptability to learn new technologies quickly and stay updated with the latest trends in
-                      web development for continuous improvement.</p>
+                    <p data-lang-key="modal-intern-desc1">Experiencia en la creación de aplicaciones web interactivas y fáciles de usar utilizando tecnologías frontend modernas como HTML5, CSS3, y frameworks de JavaScript como Angular y React.</p>
+                    <p data-lang-key="modal-intern-desc2">Conocimiento de sistemas de gestión de bases de datos como MySQL o MongoDB para garantizar un almacenamiento y recuperación eficiente de datos.</p>
+                    <p data-lang-key="modal-intern-desc3">Fuertes habilidades de resolución de problemas y la capacidad de solucionar y depurar aplicaciones para entregar resultados de alta calidad.</p>
+                    <p data-lang-key="modal-intern-desc4">Familiaridad con sistemas de control de versiones como Git para rastrear cambios en el código y colaborar efectivamente con miembros del equipo.</p>
+                    <p data-lang-key="modal-intern-desc5">Comprensión de principios de diseño responsivo para desarrollar sitios web que funcionen sin problemas en varios dispositivos y tamaños de pantalla.</p>
+                    <p data-lang-key="modal-intern-desc6">Adaptabilidad para aprender nuevas tecnologías rápidamente y mantenerse actualizado con las últimas tendencias en desarrollo web para mejora continua.</p>
 
                   </li>
 
-
-                  <h2 class="heading-main-popup popupTitle">CERTIFICATIONS</h2>
+                  <h2 class="heading-main-popup popupTitle" data-lang-key="modal-certifications-title">CERTIFICACIONES</h2>
                   <ul class="heading-sec__sub">
-                    <div class="skills">
-                      <div class="skills__skill">Front-End Developer Capstone</div>
-                      <div class="skills__skill">Advanced React</div>
-                      <div class="skills__skill">HTML and CSS in depth</div>
-                      <div class="skills__skill">Website Figma</div>
-                      <div class="skills__skill">Programming with JavaScript</div>
-                      <div class="skills__skill">Version Control</div>
-                      <div class="skills__skill">Build a Full Website</div>
+                    <div class="skills certifications-badges">
+                      <div class="skills__skill certification-badge">🏆 Front-End Developer Capstone</div>
+                      <div class="skills__skill certification-badge">⚡ Advanced React</div>
+                      <div class="skills__skill certification-badge">🎨 HTML and CSS in depth</div>
+                      <div class="skills__skill certification-badge">🎯 Website Figma</div>
+                      <div class="skills__skill certification-badge">📝 Programming with JavaScript</div>
+                      <div class="skills__skill certification-badge">🔄 Version Control</div>
+                      <div class="skills__skill certification-badge">🌐 Build a Full Website</div>
                     </div>
                   </ul>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn general-button" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn general-button" data-dismiss="modal" data-lang-key="modal-close">Close</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="about__content-skills">
-          <h3 class="Text-Title">Skills</h3>
+          <h3 class="Text-Title" data-lang-key="skills-title">Skills</h3>
         
           <!-- Languages -->
           <div class="skills-category">
@@ -327,92 +385,326 @@
   <section id="projects" class="projects sec-pad">
     <div class="main-container">
       <h2 class="heading heading-sec heading-sec__mb-bg">
-        <span class="heading-sec__main Text-Title">Projects</span>
+        <span class="heading-sec__main Text-Title" data-lang-key="projects-title">Proyectos</span>
         <span class="general-text">
-          <p>
-            Explore a selection of my work across web development, web design, and video editing. Each project showcases
-            my skills and creativity in bringing ideas to life.
-            Click on the projects to learn more about the processes and technologies used.
+          <p data-lang-key="projects-description">
+            Explora una selección de mi trabajo en desarrollo web, diseño y edición de video. Cada proyecto muestra
+            mis habilidades y creatividad para dar vida a las ideas.
+            Haz clic en los proyectos para conocer más sobre los procesos y tecnologías utilizadas.
           </p>
         </span>
       </h2>
 
-      <div class="heading-sec__main">
-        <div class="">
-          <div class="">
-            <h3 class="Text-Title" style="text-align: center; font-family: 'Press Start 2P', cursive;">GAMES HAVEN </h3>
-
-            <p class="heading-sec__sub" style="font-family: 'Press Start 2P', cursive;">
-              (in progress)
-            </p>
-            <div class="container" style="margin-top: 20px; margin-bottom: 20px; max-width: 50% !important;">
-              <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img class="d-block w-100" src="./assets/png/opened.png" alt="First slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="./assets/png/inGame.png" alt="Second slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="./assets/png/logros.png" alt="Third slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="./assets/png/rancked.png" alt="Third slide">
-                  </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </div>
-            </div>
-            <p class="general-text">
-              Game Haven is an online platform dedicated to classic games that brings nostalgia to users while providing
-              an engaging and user-friendly experience.
-              The platform features popular games such as Tetris, Minesweeper, Snake, cards, and Chess, all designed
-              with pixel art aesthetics to enhance the retro vibe.
-              Users can create accounts to save their scores and achievements, compete on a leaderboard, and enjoy a
-              seamless gaming experience across various devices.
-              The website is built using modern web technologies, ensuring optimal performance and responsiveness.
-            </p>
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        
+        <!-- BilliX Project -->
+        <div class="project-card billix-card">
+          <div class="project-icon">🔵</div>
+          <h3 class="project-title" data-lang-key="project-billix-title">BilliX</h3>
+          <p class="project-description" data-lang-key="project-billix-desc">Sistema POS completo para supermercados con gestión de inventario y caja.</p>
+          <div class="project-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">.NET Core</span>
+            <span class="tech-tag">SQL Server</span>
           </div>
+          <div class="project-responsibilities">
+            <p><strong data-lang-key="project-billix-responsibilities-label">Mis responsabilidades:</strong> <span data-lang-key="project-billix-responsibilities">UI/UX Design, conexión con API, manejo de caja, sistema de login</span></p>
+          </div>
+          <button class="project-btn" onclick="openProjectModal('billix')" data-lang-key="case-study-btn">Ver Detalles</button>
         </div>
-        <button class="button_general general-button dynamicBgClr"
-          onclick="window.open('./ComingSoon.html', '_blank')">See Projects</button>
+
+        <!-- Game Haven Project -->
+        <div class="project-card gamehaven-card">
+          <div class="project-icon">🟣</div>
+          <h3 class="project-title" data-lang-key="project-gamehaven-title">Game Haven</h3>
+          <p class="project-description" data-lang-key="project-gamehaven-desc">Plataforma de juegos clásicos con estilo retro/pixel: Tetris, Snake, Chess y más.</p>
+          
+          <!-- Carousel para Game Haven -->
+          <div class="project-carousel">
+            <div id="gameHavenCarousel" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="./assets/png/opened.png" alt="Game Haven - Pantalla principal">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="./assets/png/inGame.png" alt="Game Haven - En juego">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="./assets/png/logros.png" alt="Game Haven - Logros">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="./assets/png/rancked.png" alt="Game Haven - Rankings">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#gameHavenCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              </a>
+              <a class="carousel-control-next" href="#gameHavenCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="project-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">JWT</span>
+            <span class="tech-tag">Passport.js</span>
+          </div>
+          <p class="project-features"><strong data-lang-key="project-gamehaven-features-label">Características:</strong> <span data-lang-key="project-gamehaven-features">Login, sistema de logros, puntuaciones, diseño pixel art</span></p>
+          <button class="project-btn" onclick="window.open('./ComingSoon.html', '_blank')" data-lang-key="visit-project-btn">Ver Demo</button>
+        </div>
+
+        <!-- AI Rutinas App Project -->
+        <div class="project-card ai-app-card">
+          <div class="project-icon">🟢</div>
+          <h3 class="project-title" data-lang-key="project-ai-rutinas-title">App de Rutinas con IA</h3>
+          <p class="project-description" data-lang-key="project-ai-rutinas-desc">Aplicación inteligente que personaliza rutinas de entrenamiento usando IA.</p>
+          <div class="project-status">
+            <span class="status-badge in-development" data-lang-key="project-ai-rutinas-status">🚀 En Desarrollo</span>
+          </div>
+          <div class="project-tech">
+            <span class="tech-tag">React Native</span>
+            <span class="tech-tag">AI/ML</span>
+            <span class="tech-tag">Node.js</span>
+          </div>
+          <p class="project-features"><strong data-lang-key="project-ai-rutinas-focus-label">Enfoque:</strong> <span data-lang-key="project-ai-rutinas-focus">Salud, deporte y personalización con inteligencia artificial</span></p>
+          <button class="project-btn teaser-btn" disabled data-lang-key="coming-soon">Próximamente</button>
+        </div>
+
       </div>
     </div>
   </section>
+
+  <!-- Sección de Intereses -->
+  <section id="interests" class="interests sec-pad">
+    <div class="main-container">
+      <h2 class="heading heading-sec heading-sec__mb-bg">
+        <span class="heading-sec__main Text-Title" data-lang-key="interests-title">Mis Intereses</span>
+        <span class="general-text">
+          <p data-lang-key="interests-description">
+            Más allá del código, estos son los hobbies y pasiones que me inspiran y motivan en mi día a día.
+          </p>
+        </span>
+      </h2>
+      
+       <div class="interests-categories">
+        <!-- Tecnología y Juegos -->
+        <div class="interest-category">
+          <h3 class="category-title" data-lang-key="category-tech-games">🎮 Tecnología y Juegos</h3>
+          <div class="interests-grid">
+            <div class="interest-item">
+              <span class="interest-icon">🕹️</span>
+              <span data-lang-key="interest-retro-games">Videojuegos clásicos (Tetris, Snake, Pac-Man)</span>
+            </div>
+            <div class="interest-item">
+              <span class="interest-icon">👾</span>
+              <span data-lang-key="interest-pixel-art">Pixel art & diseño retro</span>
+            </div>
+            <div class="interest-item">
+              <span class="interest-icon">🧩</span>
+              <span data-lang-key="interest-game-ui">Diseño de interfaces para juegos</span>
+            </div>
+            <div class="interest-item">
+              <span class="interest-icon">🧠</span>
+              <span data-lang-key="interest-ai-creative">Inteligencia artificial aplicada a proyectos creativos</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deporte y Disciplina -->
+        <div class="interest-category">
+          <h3 class="category-title" data-lang-key="category-sports-discipline">🥊 Deporte y Disciplina</h3>
+          <div class="interests-grid">
+            <div class="interest-item">
+              <span class="interest-icon">🥊</span>
+              <span data-lang-key="interest-boxing">Boxeo (entrenamiento, técnicas, torneos)</span>
+            </div>
+            <div class="interest-item">
+              <span class="interest-icon">🧘‍♂️</span>
+              <span data-lang-key="interest-healthy-life">Vida saludable (nutrición, ejercicio, hábitos)</span>
+            </div>
+            <div class="interest-item">
+              <span class="interest-icon">🏃‍♂️</span>
+              <span data-lang-key="interest-ai-routines">Rutinas personalizadas con IA (visión futura en desarrollo)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arte y Creatividad -->
+        <div class="interest-category">
+          <h3 class="category-title" data-lang-key="category-art-creativity">🎨 Arte y Creatividad</h3>
+          <div class="interests-grid">
+            <div class="interest-item">
+              <span class="interest-icon">✍️</span>
+              <span data-lang-key="interest-traditional-digital-drawing">Dibujo tradicional y digital</span>
+            </div>
+            <div class="interest-item">
+              <span class="interest-icon">🎨</span>
+              <span data-lang-key="interest-graphic-design">Diseño gráfico</span>
+            </div>
+            <div class="interest-item">
+              <span class="interest-icon">🖼️</span>
+              <span data-lang-key="interest-character-creation">Creación de personajes o mascotas digitales</span>
+            </div>
+            <div class="interest-item">
+              <span class="interest-icon">💡</span>
+              <span data-lang-key="interest-minimalist-art">Inspiración en arte minimalista o nostálgico</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desarrollo Web -->
+        <div class="interest-category">
+          <h3 class="category-title" data-lang-key="category-web-development">🧑‍💻 Desarrollo Web</h3>
+          <div class="interests-grid">
+            <div class="interest-item">
+              <span class="interest-icon">🖥️</span>
+              <span data-lang-key="interest-ui-ux">UI/UX centrado en el usuario</span>
+            </div>
+            <div class="interest-item">
+              <span class="interest-icon">⚙️</span>
+              <span data-lang-key="interest-real-solutions">Crear soluciones para problemas reales (como BilliX)</span>
+            </div>
+            <div class="interest-item">
+              <span class="interest-icon">🔄</span>
+              <span data-lang-key="interest-improve-products">Mejorar productos en evolución</span>
+            </div>
+            <div class="interest-item">
+              <span class="interest-icon">🧪</span>
+              <span data-lang-key="interest-new-tech">Aprender nuevas tecnologías y experimentar</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Valores y Personalidad -->
+        <div class="interest-category">
+          <h3 class="category-title" data-lang-key="category-values-personality">🧬 Valores y Personalidad</h3>
+          <div class="interests-grid">
+            <div class="interest-item">
+              <span class="interest-icon">🚀</span>
+              <span data-lang-key="interest-autodidact">Autodidacta</span>
+            </div>
+            <div class="interest-item">
+              <span class="interest-icon">🧩</span>
+              <span data-lang-key="interest-curious">Curioso y resolutivo</span>
+            </div>
+            <div class="interest-item">
+              <span class="interest-icon">🔥</span>
+              <span data-lang-key="interest-creative-pressure">Creativo bajo presión</span>
+            </div>
+            <div class="interest-item">
+              <span class="interest-icon">�‍👩‍👧‍👦</span>
+              <span data-lang-key="interest-collaborative">Colaborativo y con experiencia en equipos reales</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Color Favorito -->
+        <div class="interest-category color-showcase">
+          <h3 class="category-title" data-lang-key="category-favorite-color">💚 Color Favorito</h3>
+          <div class="color-preference">
+            <div class="color-palette">
+              <div class="color-sample" style="background-color: #0f4e1e;" title="Verde Principal"></div>
+              <div class="color-sample" style="background-color: #1a5d2b;" title="Verde Medio"></div>
+              <div class="color-sample" style="background-color: #2d7a3d;" title="Verde Claro"></div>
+              <div class="color-sample" style="background-color: #4feb5e;" title="Verde Acento"></div>
+            </div>
+            <p class="color-description" data-lang-key="interest-green-desc">
+              El verde representa crecimiento, naturaleza y equilibrio. Es el color que mejor refleja mi personalidad y visión.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Sección de Contacto -->
+  <section id="contact" class="contact sec-pad">
+    <div class="main-container">
+      <h2 class="heading heading-sec heading-sec__mb-bg">
+        <span class="heading-sec__main Text-Title" data-lang-key="contact-title">Contacto</span>
+        <span class="general-text">
+          <p data-lang-key="contact-description">
+            ¿Tienes un proyecto en mente? ¿Quieres colaborar? No dudes en contactarme.
+          </p>
+        </span>
+      </h2>
+      
+      <div class="contact-content">
+        <div class="contact-form-container">
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name" data-lang-key="contact-name">Nombre</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email" data-lang-key="contact-email">Correo Electrónico</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message" data-lang-key="contact-message">Mensaje</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="contact-btn" data-lang-key="contact-send">Enviar Mensaje</button>
+          </form>
+        </div>
+        
+        <div class="contact-info">
+          <div class="contact-details">
+            <h3>Conectemos</h3>
+            <p>📧 bryanthomasjb@gmail.com</p>
+            <p>🌍 Costa Rica</p>
+          </div>
+          
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/bryan-brenes-12216a273" target="_blank" class="social-link">
+              <img src="./assets/png/linkedin-ico.png" alt="LinkedIn" />
+              LinkedIn
+            </a>
+            <a href="https://github.com/chinotrb" target="_blank" class="social-link">
+              <img src="./assets/png/github-ico.png" alt="GitHub" />
+              GitHub
+            </a>
+            <a href="https://www.instagram.com/bryan_chino20/?hl=en" target="_blank" class="social-link">
+              <img src="./assets/png/insta-ico.png" alt="Instagram" />
+              Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer class="main-footer">
     <div class="main-container">
       <div class="main-footer__upper">
         <div class="main-footer__row main-footer__row-1">
           <h2 class="heading heading-sm main-footer__heading-sm">
-            <span>Social</span>
+            <span>Redes Sociales</span>
           </h2>
           <div class="main-footer__social-cont">
-            <a href="https://www.linkedin.com/in/bryan-brenes-12216a273" target="_blank" rel="noreferrer" href="#">
-              <img class="main-footer__icon" src="./assets/png/linkedin-ico.png" alt="icon" />
+            <a href="https://www.linkedin.com/in/bryan-brenes-12216a273" target="_blank" rel="noreferrer">
+              <img class="main-footer__icon" src="./assets/png/linkedin-ico.png" alt="LinkedIn" />
             </a>
-            <a href="https://github.com/chinotrb" target="_blank" rel="noreferrer" href="#">
-              <img class="main-footer__icon" src="./assets/png/github-ico.png" alt="icon" />
+            <a href="https://github.com/chinotrb" target="_blank" rel="noreferrer">
+              <img class="main-footer__icon" src="./assets/png/github-ico.png" alt="GitHub" />
             </a>
-            <a href="https://www.instagram.com/bryan_chino20/?hl=en" target="_blank" rel="noreferrer" href="#">
-              <img class="main-footer__icon main-footer__icon--mr-none" src="./assets/png/insta-ico.png" alt="icon" />
+            <a href="https://www.instagram.com/bryan_chino20/?hl=en" target="_blank" rel="noreferrer">
+              <img class="main-footer__icon main-footer__icon--mr-none" src="./assets/png/insta-ico.png" alt="Instagram" />
             </a>
           </div>
         </div>
         <div class="main-footer__row main-footer__row-2">
-          <h4 class="heading heading-sm text-lt">B.J.B</h4>
+          <h4 class="heading heading-sm text-lt">Bryan J. Brenes</h4>
           <p class="main-footer__short-desc">
-            chinotrb@gmail.com
+            📧 bryanthomasjb@gmail.com
           </p>
           <p class="main-footer__short-desc">
-            Projects not finished, updates will be made in the future.
+            Gracias por visitar mi sitio. Más actualizaciones y proyectos vendrán pronto.
+          </p>
+          <p class="main-footer__credits">
+            Desarrollado con pasión por Bryan J. Brenes 💻🥊🎮
           </p>
         </div>
       </div>
@@ -427,6 +719,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+  <script src="translations.js"></script>
+  <script src="index.js"></script>
 </body>
 
 </html>

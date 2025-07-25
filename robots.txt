@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://bryanjbrenes.dev/sitemap.xml
+
+# Disallow specific files
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /package.json
+Disallow: /purgecss.config.js
